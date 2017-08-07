@@ -1,4 +1,9 @@
 package com.vodafone.reward.to;
+/**
+ * RequestTo
+ * Request envelop class which enclose Lists of types Voucher and Credit
+ * 
+ */
 
 import java.util.List;
 

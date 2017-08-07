@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vodafone.reward.exception.GenericException;
 import com.vodafone.reward.model.Credit;
-import com.vodafone.reward.model.Reward;
 import com.vodafone.reward.model.Voucher;
 import com.vodafone.reward.service.RewardService;
 import com.vodafone.reward.to.RequestTo;
+import com.vodafone.reward.to.ResponseTo;
 
 /**
  * RewardController
@@ -40,7 +40,7 @@ public class RewardController {
 	 * @throws GenericException
 	 */
 	@RequestMapping(value = "/rewards", method = RequestMethod.POST)
-	public List<Reward> getRewardsByPerson(@RequestBody RequestTo requestTo) throws GenericException {
+	public ResponseTo getRewardsByPerson(@RequestBody RequestTo requestTo) throws GenericException {
 		List<Voucher> vouchers = requestTo.getVouchers();
 		List<Credit> credits = requestTo.getCredits();
 

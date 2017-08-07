@@ -1,12 +1,15 @@
 package com.vodafone.reward.model;
 
+/** Credit
+ * Entity json equivalent for type Credit 
+ */
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "credit-id", "points", "firstname", "lastname" })
-public class Credit {
+public class Credit extends AbstractBaseCreditVoucher {
 
 	@JsonProperty("credit-id")
 	private String creditId;

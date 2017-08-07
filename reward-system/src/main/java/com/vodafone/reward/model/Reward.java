@@ -1,5 +1,9 @@
 package com.vodafone.reward.model;
 
+import java.util.ArrayList;
+/** Reward
+ * Entity json equivalent for type Reward
+ */
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -11,9 +15,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class Reward {
 
 	@JsonProperty("credit")
-	private List<String> credit = null;
+	private List<String> credit = new ArrayList<>();
 	@JsonProperty("voucher")
-	private List<String> voucher = null;
+	private List<String> voucher = new ArrayList<>();
 	@JsonProperty("firstname")
 	private String firstname;
 	@JsonProperty("lastname")
@@ -21,6 +25,19 @@ public class Reward {
 
 	public Reward() {
 
+	}
+
+	/**
+	 * This constructor allows to set firstname and lastname fields from Person
+	 * type object
+	 * 
+	 * @param Person
+	 *            P
+	 */
+	public Reward(Person p) {
+		super();
+		this.firstname = p.getFirstname();
+		this.lastname = p.getLastname();
 	}
 
 	@JsonProperty("credit")
