@@ -1,6 +1,7 @@
 # SpringBoot-Example <br />
 *Project Name*: 	reward-system<br />
 *Build*:	Maven<br />
+*Java Version*: 1.7 </br>
 *Frameworks*:	Spring Boot, Spring MVC for REST<br />
 *Maven command to run project*: 	mvn spring-boot:run<br />
 *API Endpoint*:	http://localhost:8181/rewards<br />
